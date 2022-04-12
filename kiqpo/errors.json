@@ -1,0 +1,10 @@
+[
+    {
+        "error":"No such commands or options.\n -h, --help to show help message",
+        "code":100
+    },
+    {
+        "error":"You're not connected to internet.\n Palace try again letter",
+        "code":101
+    }
+]

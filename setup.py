@@ -1,4 +1,4 @@
-"""Python setup.py for kiqpo.cli package"""
+"""Python setup.py for kiqpo package"""
 import io
 import os
 from setuptools import find_packages, setup
@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 def read(*paths, **kwargs):
     """Read the contents of a text file safely.
-    >>> read("kiqpo.cli", "VERSION")
+    >>> read("kiqpo", "VERSION")
     '0.1.0'
     >>> read("README.md")
     ...
@@ -30,17 +30,19 @@ def read_requirements(path):
 
 
 setup(
-    name="kiqpo.cli",
-    version=read("kiqpo.cli", "VERSION"),
-    description="Awesome kiqpo.cli created by kiqpo",
+    name="kiqpo",
+    version=read("kiqpo", "VERSION"),
+    description="Command Line Interface (CLI) for Kiqpo",
     url="https://github.com/kiqpo/kiqpo.cli/",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     author="kiqpo",
-    packages=find_packages(exclude=["tests", ".github"]),
+    packages=['kiqpo','kiqpo/section'],
     install_requires=read_requirements("requirements.txt"),
     entry_points={
-        "console_scripts": ["kiqpo.cli = kiqpo.cli.__main__:main"]
+        "console_scripts": [
+            "kiqpo = kiqpo.__main__:main"
+        ]
     },
     extras_require={"test": read_requirements("requirements-test.txt")},
 )

@@ -1,6 +1,6 @@
 import pytest
 
-from kiqpo.cli import BaseClass, base_function
+from kiqpo import BaseClass, base_function
 
 given = pytest.mark.parametrize
 

@@ -1,24 +1,16 @@
 """
-kiqpo.cli base module.
+kiqpo base module.
 
-This is the principal module of the kiqpo.cli project.
+This is the principal module of the kiqpo CLI project.
 here you put your main classes and objects.
 
 Be creative! do whatever you want!
-
-If you want to replace this with a Flask application run:
-
-    $ make init
-
-and then choose `flask` as template.
 """
 
 
 class BaseClass:
     def base_method(self) -> str:
-        """
-        Base method.
-        """
+        # Base method
         return "hello from BaseClass"
 
     def __call__(self) -> str:
@@ -26,7 +18,5 @@ class BaseClass:
 
 
 def base_function() -> str:
-    """
-    Base function.
-    """
+    # Base function
     return "hello from base function"
